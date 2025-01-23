@@ -54,6 +54,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Enter">
                                             <color key="baseBackgroundColor" red="0.86310547458258036" green="0.82562217296493035" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="searchAction:" destination="YyY-jy-uyg" eventType="touchUpInside" id="PhL-jN-KaC"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzL-6a-ovV">
                                         <rect key="frame" x="0.0" y="392.33333333333331" width="393" height="8.3333333333333144"/>
@@ -65,12 +68,21 @@
                                         <rect key="frame" x="0.0" y="400.66666666666674" width="393" height="421"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zfX-Zo-KgF">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="DbA-DO-12f" style="IBUITableViewCellStyleDefault" id="zfX-Zo-KgF">
                                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zfX-Zo-KgF" id="KXy-bJ-XBW">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DbA-DO-12f">
+                                                            <rect key="frame" x="20" y="0.0" width="353" height="43.666667938232422"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
@@ -104,6 +116,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t2M-Hk-lWx"/>
+                    <connections>
+                        <outlet property="searchBarOutlet" destination="cmQ-VG-Uzg" id="nQc-Kj-cR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fM-jj-SH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
