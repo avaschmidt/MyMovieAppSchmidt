@@ -21,13 +21,13 @@ class MovieFinderViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-
     @IBAction func addFavoriteAction(_ sender: UIButton) {
         if AppData.selected == ""{
             print("Error: Not Selected")
             
         }
         else{
+            print("Adding \(AppData.selected)")
             AppData.favorites.append(AppData.selected)
         }
     }
@@ -79,7 +79,7 @@ class MovieFinderViewController: UIViewController, UITableViewDelegate, UITableV
                         
                         var theSearch = jsonObj["Search"] as! [NSDictionary]
                         //print(theSearch)
-                        
+                        self.titles.removeAll()
                         
                         /*var title = theSearch[0]["Title"]!
                          print(title)
